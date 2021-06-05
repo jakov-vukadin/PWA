@@ -1,0 +1,216 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f5f6f8;
+}
+
+
+.cont{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+.clear{
+    clear: left;
+}
+
+
+h2{
+    border-top: black solid;
+    padding: 50px 0 0 0;
+    font-family:"The Antiqua B",Georgia,serif;
+    color: #2a303b;
+}
+
+h1,h2,h4,h4,p,a, label{
+    font-family:"The Antiqua B",Georgia,serif;
+    color: #2a303b;
+}
+
+.subpage h4{
+    color: grey;
+}
+.subpage h1{
+    font-size:2rem;
+    line-height: 1.11;
+    font-weight: 500;
+}
+
+.subpage h2{
+    padding: 50px;
+}
+
+button{
+    background-color: darkslategrey;
+    color: white;
+    padding: 5px;
+    border-style: none;
+    font-family:"The Antiqua B",Georgia,serif;
+}
+
+/* ---------- Header ---------------*/
+
+header{
+    width: 100%;
+    background-color: white;
+    color: #2a303b;
+    box-shadow: 10px 2px 5px grey;
+}
+
+
+nav{
+    border-top: #026b9c solid;
+    border-bottom: gray solid 1px;
+    box-shadow: 10px 2px 5px grey;
+}
+
+#logo{
+    width:290px;
+    height:61px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+}
+
+ul{
+    display: inline-block;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    float: left;
+    margin-right: 15px;
+    
+}
+
+/*--------content-------*/
+
+.main_page main{
+    padding: 0 10px;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+.main_page #head_section{
+    padding: 60px 15px 0 ;
+}
+
+.main_page section{
+    overflow: auto; 
+    padding: 20px 15px;
+}
+
+.subpage section{
+    overflow: auto; 
+    padding: 60px 15px;
+    margin: 40px 0 0;
+}
+
+.main_page section a{
+    color:#2a303b;
+    font-family:"The Antiqua B",Georgia,serif;
+}
+
+.subpage section p{
+    font-size: 1.1rem;
+    line-height: 1.44;
+    letter-spacing: .009rem;
+}
+
+.main_page article{
+    float: left;
+    max-width: 30%;
+    height: 100%;
+}
+
+.subpage article{
+    float: left;
+}
+
+.main_page .mid_grid{
+    padding: 0 4.75%;
+}
+
+
+.subpage figure{
+    padding: 0;
+    margin: 0;
+}
+
+.subpage figcaption{
+    color:grey;
+    font-size: 13px;
+}
+
+.images{
+    height: 342px;
+}
+
+article img{
+    max-width: 100%;
+}
+
+.main_page .big_pic{
+    max-height: 60%;
+    min-width: 100%;
+}
+
+.main_page .small_pic{
+    min-width: 100%;
+    max-height: 40%;
+}
+
+.subpage article p{
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.form-item{
+    padding: 20px 0;
+}
+
+/*----------------------FOOTER------------------*/
+
+footer{
+    background-color: darkslategrey;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    bottom:0;
+}
+footer .cont{
+    background-color:darkslategray;
+    text-align: center;
+}
+
+footer p{
+    border-top: white solid 1px;
+    padding-top:15px;
+    color: white;
+}
+
+@media (max-width:600px){
+    nav a{
+        display:block;
+        text-align: center;
+    }
+    li{
+        
+        clear: both;
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+    
+}
