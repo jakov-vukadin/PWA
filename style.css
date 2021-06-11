@@ -49,6 +49,10 @@ button{
     font-family:"The Antiqua B",Georgia,serif;
 }
 
+.form-group{
+    height:200px;
+}
+
 /* ---------- Header ---------------*/
 
 header{
