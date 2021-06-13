@@ -42,7 +42,7 @@
         <div id="page-cont">
             <header>                
                 <div class="cont">
-                    <img id="logo" src="images/Lemondelogo.png" alt="">
+                    <a href="index.php"><img id="logo" src="images/Lemondelogo.png" alt=""></a>
                 </div>
                 <nav>
                     <div class="cont">
@@ -67,43 +67,98 @@
                             <div class="form-item"> 
                                 <label for="ime">Name:</label>
                                 <div class="form-field"> 
-                                    <input type="text" name="ime" class="form-field-textual">
+                                    <input type="text" name="ime" class="form-field-textual" id="ime">
+                                    <span id="ime_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="prezime">Surname:</label>
-                                <div class="form-field"> 
-                                    <input type="text" name="prezime" class="form-field-textual">
+                                <div class="form-field" > 
+                                    <input type="text" name="prezime" class="form-field-textual" id="prezime">
+                                    <span id="prezime_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="username">Username:</label>
                                 <div class="form-field"> 
-                                    <input type="text" name="username" class="form-field-textual">
+                                    <input type="text" name="username" class="form-field-textual" id="username">
+                                    <span id="username_error" class="error"></span>
                                 </div>
                             </div>
                         
                             <div class="form-item"> 
                                 <label for="password">Password:</label>
                                 <div class="form-field"> 
-                                    <input type="password" name="password" class="form-field-textual">
+                                    <input type="password" name="password" class="form-field-textual" id="password">
+                                    <span id="password_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="password2">Repeat password:</label>
                                 <div class="form-field"> 
-                                    <input type="password" name="password2" class="form-field-textual">
+                                    <input type="password" name="password2" class="form-field-textual" id="password2">
+                                    <span id="password2_error" class="error"></span>
                                 </div>
                             </div>
                           
                           <div class="form-item"> 
                                 <button type="reset" value="Poništi">Poništi</button> 
-                                <button name="submit" type="submit">Prihvati</button> 
+                                <button name="submit" type="submit" onclick="hehe()">Prihvati</button> 
                             </div>
                         </form>
+                        <script type="text/javascript">
+                            function hehe(){
+                              
+                                var form_submition = true;
+                                var ime_p=document.getElementById('ime');
+                                var ime=document.getElementById('ime').value;
+                                var prezime_p=document.getElementById('prezime');
+                                var prezime=document.getElementById('prezime').value;
+                                var username_p=document.getElementById('username');
+                                var username=document.getElementById('username').value;
+                                var password_p=document.getElementById('password');
+                                var password=document.getElementById('password').value;
+                                var password2_p=document.getElementById('password2');
+                                var password2=document.getElementById('password2').value;
+                                
+                                
+                                if(ime == "" || ime == null){
+                                    form_submition = false;
+                                    ime_p.style.border="1px solid red";
+                                    document.getElementById("ime_error").innerHTML = "Unesite ime!";
+                                }
+                                if(prezime == "" || prezime == null){
+                                    form_submition = false;
+                                    prezime_p.style.border="1px solid red";
+                                    document.getElementById("prezime_error").innerHTML = "Unesite prezime!";
+                                }
+                                if(username == "" || username==null || username.length<1){
+                                    form_submition = false;
+                                    username_p.style.border="1px solid red"
+                                    document.getElementById("username_error").innerHTML = "Unesite ime!";
+                                }
+                                
+                                if(password == "" || password == null){
+                                    form_submition = false;
+                                    password_p.style.border="1px solid red";
+                                    document.getElementById("password_error").innerHTML = "Unesite lozinku!";
+                                }
+                                if(password2 != password){
+                                    form_submition = false;
+                                    password2_p.style.border="1px solid red";
+                                    document.getElementById("password2_error").innerHTML = "Lozinke moraju biti iste";
+                                }
+                                if (form_submition != true) {
+                                    
+                                    event.preventDefault()
+                                 
+                                }
+                    
+                            }
+                        </script>
                     </section>
                 </div>
             </main>

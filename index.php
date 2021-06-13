@@ -14,7 +14,7 @@
         <div id="page-cont">
             <header>                
                 <div class="cont">
-                    <img id="logo" src="images/Lemondelogo.png" alt="">
+                    <a href="index.php"><img id="logo" src="images/Lemondelogo.png" alt=""></a>
                 </div>
                 <nav>
                     <div class="cont">
@@ -32,7 +32,7 @@
             <main>
                 <div class="cont">
                     <section id="head_section">
-                    <h2>Sport</h2>
+                    <h2>sport</h2>
                         <?php
                             $i=0;
                             $query = "SELECT * FROM `news` WHERE `archive`=0 AND `category` LIKE 'sport' LIMIT 3";
@@ -66,7 +66,7 @@
                     </section>
                     <div class="clear"></div>
                     <section id="head_section">
-                    <h2>Politique</h2>
+                    <h2>politique</h2>
                         <?php
                             $i=0;
                             $query = "SELECT * FROM `news` WHERE `archive`=0 AND `category` LIKE 'politique' LIMIT 3";

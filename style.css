@@ -5,6 +5,10 @@ html, body{
     background-color: #f5f6f8;
 }
 
+header a{
+    padding: 0;
+    margin: 0;
+}
 
 .cont{
     max-width: 800px;
@@ -51,6 +55,10 @@ button{
 
 .form-group{
     height:200px;
+}
+
+.error{
+    color: red;
 }
 
 /* ---------- Header ---------------*/
@@ -156,20 +164,24 @@ header a{
 
 .images{
     height: 342px;
+    padding: 0;
+    margin:0;
 }
 
 article img{
     max-width: 100%;
 }
 
-.main_page .big_pic{
+.big_pic{
+    min-height: 60%;
     max-height: 60%;
     min-width: 100%;
 }
 
-.main_page .small_pic{
-    min-width: 100%;
+.small_pic{
+    min-height: 40%;
     max-height: 40%;
+    min-width: 100%;
 }
 
 .subpage article p{
