@@ -5,7 +5,8 @@
         <title>Le Monde</title>
         <link rel="stylesheet" href="style.css" type="text/css">
         <?php
-            include 'unos.php'
+            include 'unos.php';
+            include 'connect.php';
         ?>
     </head>
     <body class="subpage">
