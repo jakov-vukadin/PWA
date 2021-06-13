@@ -23,7 +23,7 @@
                             <li><a href="kategorija.php?id=sport">SPORT</a></li>
                             <li><a href="kategorija.php?id=politique">POLITIQUE</a></li>
                             <li><a href="administracija.php">ADMINISTRACIJA</a></li>
-                            <li><a href="unos.html">SOUMETTRE</a></li>
+                            <li><a href="unos.html">UNOS</a></li>
                         </ul>
                     </div>
                 </nav>
