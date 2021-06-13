@@ -15,7 +15,7 @@
         <div id="page-cont">
             <header>                
                 <div class="cont">
-                    <img id="logo" src="images/Lemondelogo.png" alt="">
+                    <a href="index.php"><img id="logo" src="images/Lemondelogo.png" alt=""></a>
                 </div>
                 <nav>
                     <div class="cont">

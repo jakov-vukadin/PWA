@@ -4,12 +4,17 @@
         <meta charset="UTF-8">
         <title>Le Monde</title>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
     </head>
     <body class="subpage">
         <div id="page-cont">
             <header>                
                 <div class="cont">
-                    <img id="logo" src="images/Lemondelogo.png" alt="">
+                    <a href="index.php"><img id="logo" src="images/Lemondelogo.png" alt=""></a>
                 </div>
                 <nav>
                     <div class="cont">
@@ -23,55 +28,59 @@
                     </div>
                 </nav>
             </header>
-           
             <main>
                 <div class="cont">
                     <section>
                         <h4>SOUMETTRE</h4>
-                        <form action="skripta.php" method="POST" enctype="multipart/form-data">
+                        <form id="myform" action="skripta.php" method="POST" enctype="multipart/form-data">
                             <div class="form-item"> 
                                 <label for="title">Naslov vijesti</label>
                                 <div class="form-field"> 
-                                    <input type="text" name="title" class="form-field-textual"> 
+                                    <input type="text" name="title" class="form-field-textual" id="title"><br>
+                                    <span id="title_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="about_content">Kratki sadržaj vijesti (do 50 znakova)</label>
                                 <div class="form-field"> 
-                                    <textarea name="about_content" id="" cols="60" rows="10" class="form-field-textual"></textarea>
+                                    <textarea name="about_content" id="about_content" cols="60" rows="10" class="form-field-textual"></textarea><br>
+                                    <span id="about_content_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="content">Sadržaj vijesti</label>
                                 <div class="form-field"> 
-                                    <textarea name="content" id="" cols="60" rows="10" class="form-field-textual"></textarea> 
+                                    <textarea name="content" id="content" cols="60" rows="10" class="form-field-textual"></textarea><br>
+                                    <span id="content_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="photo">Slika: </label>
                                 <div class="form-field"> 
-                                    <input type="file" accept="image/jpg,image/gif,image/jpeg,image/png" class="input-text" name="photo"/>
+                                    <input type="file" accept="image/jpg,image/gif,image/jpeg,image/png" class="input-text" name="photo" id="photo"/><br>
+                                    <span id="photo_error" class="error"></span>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
                                 <label for="photo">Kratki opis slike (do 50 znakova)</label>
                                 <div class="form-field"> 
-                                    <textarea name="about_photo" id="" cols="60" rows="2" class="form-field-textual"></textarea>
+                                    <textarea name="about_photo" id="about_photo" cols="60" rows="2" class="form-field-textual"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-item"> 
-                                <label for="news_category">Kategorija vijesti</label>
+                                <label for="category">Kategorija vijesti</label>
                                 <div class="form-field"> 
-                                    <select name="category" id="" class="form-field-textual">
+                                    <select name="category" id="category" class="form-field-textual">
                                         <option value="" disabled selected>Odabir</option>
                                         <option value="Sport">Sport</option>
                                         <option value="Politique">Politique</option>
-                                    </select> 
+                                    </select><br>
+                                    <span id="category_error" class="error"></span>
                                 </div>
                             </div>
 
@@ -82,10 +91,62 @@
                                 </div>  
                             </div>
 
-                            <div class="form-item"> <button type="reset" value="Poništi">Poništi</button> <button type="submit"
-                                    value="Prihvati">Prihvati</button> </div>
+                            <div class="form-item"> 
+                                <button type="reset" value="Poništi">Poništi</button> 
+                                <button name="submit" type="submit" id="gumb" onclick="hehe()">Prihvati</button> 
+                            </div>
                         </form>
-                    </section>
+                        <script type="text/javascript">
+                            function hehe(){
+                              
+                                var form_submition = true;
+                                var title_p=document.getElementById('title');
+                                var title=document.getElementById('title').value;
+                                var about_content_p=document.getElementById('about_content');
+                                var about_content=document.getElementById('about_content').value;
+                                var content_p=document.getElementById('content');
+                                var content=document.getElementById('content').value;
+                                var photo_p=document.getElementById('photo');
+                                var photo=document.getElementById('photo').value;
+                                var category_p=document.getElementById('category');
+                                var category=document.getElementById('category').value;
+                                
+                                
+                                if(title.length <5 || title.length>30){
+                                    form_submition = false;
+                                    title_p.style.border="1px solid red";
+                                    document.getElementById("title_error").innerHTML = "Naslov vijesti mora imati od 5 do 30 znakova!";
+                                }
+                                if(about_content.length<10 || about_content.length>100){
+                                    form_submition = false;
+                                    about_content_p.style.border="1px solid red";
+                                    document.getElementById("about_content_error").innerHTML = "Kratki sadržaj vijesti mora imati od 10 do 100 znakova!";
+                                }
+                                if(content == ""){
+                                    form_submition = false;
+                                    content_p.style.border="1px solid red"
+                                    document.getElementById("content_error").innerHTML = "Tekst vijesti ne smije biti prazan!";
+                                }
+                                
+                                if(photo == ""){
+                                    form_submition = false;
+                                    photo_p.style.border="1px solid red";
+                                    document.getElementById("photo_error").innerHTML = "Slika mora biti odabrana!";
+                                }
+                                if(category == ""){
+                                    form_submition = false;
+                                    category_p.style.border="1px solid red";
+                                    document.getElementById("category_error").innerHTML = "Kategorija mora biti odabrana!";
+                                }
+                                if (form_submition != true) {
+                                    
+                                    event.preventDefault()
+                                 
+                                }
+                    
+                            }
+                        </script>
+                        
             </main>
             <div class="clear"></div>
             <footer>
@@ -95,6 +156,7 @@
                     </div>
                 </div>
             </footer>
-        </div>  
+        </div> 
+    </section>
     </body>
 </html>

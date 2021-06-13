@@ -21,7 +21,7 @@
                         <ul>
                             <li><a href="index.php">HOME</a></li>
                             <li><a href="kategorija.php?id=sport">SPORT</a></li>
-                            <li><a href="kategorija.php?id=politique">POLITIQUE</a></li>
+                            <li><a href="kategorija.php?id=politique">POLITIKA</a></li>
                             <li><a href="administracija.php">ADMINISTRACIJA</a></li>
                             <li><a href="unos.html">SOUMETTRE</a></li>
                         </ul>
