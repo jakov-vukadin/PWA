@@ -154,7 +154,7 @@ if (isset($_POST['submit'])) {
         } 
         // Pokaži poruku da je korisnik uspješno prijavljen, ali nije administrator 
     } else if ($uspjesnaPrijava == true && $admin == false) { 
-        echo '<p>Bok ' . $imeKorisnika . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
+        echo '<p style="height:150px;>Bok ' . $imeKorisnika . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
     } else if (isset($_SESSION['$username']) && $_SESSION['$level'] == 0) {
         echo '<p style="height:150px;">Bok ' . $_SESSION['$username'] . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
     } else if ($no_user==true) {
