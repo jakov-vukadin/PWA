@@ -156,7 +156,7 @@ if (isset($_POST['submit'])) {
     } else if ($uspjesnaPrijava == true && $admin == false) { 
         echo '<p>Bok ' . $imeKorisnika . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
     } else if (isset($_SESSION['$username']) && $_SESSION['$level'] == 0) {
-        echo '<p>Bok ' . $_SESSION['$username'] . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
+        echo '<p style="height:150px;">Bok ' . $_SESSION['$username'] . '! Uspješno ste prijavljeni, ali niste administrator.</p>'; 
     } else if ($no_user==true) {
         echo '<section id="head_section">';
         echo '<p>Uneseno korisničko ime ne postoji</p><br><a href="registracija.php"> Registriraj se!</a>';
